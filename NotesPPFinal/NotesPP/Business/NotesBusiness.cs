@@ -90,5 +90,13 @@ namespace NotesPP
                 }
             }
         }
+
+        public Notes Get(int id)
+        {
+            using (notesppContext = new notesppContext())
+            {
+                return notesppContext.Notes.Find(id);
+            }
+        }
     }
 }

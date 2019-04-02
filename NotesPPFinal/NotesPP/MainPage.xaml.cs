@@ -22,9 +22,56 @@ namespace NotesPP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private NotesBusiness notesBusiness = new NotesBusiness();
+
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void UpdateNotes()
+        {
+            NotesGrid.ItemsSource = notesBusiness.GetAllNotes();
+        }
+
+        private void Button_Add(object sender, RoutedEventArgs e)
+        {
+            Notes note = new Notes()
+            {
+                Name = NoteName.Text,
+                Content = NoteContent.Text
+            };
+            notesBusiness.Add(note);
+            UpdateNotes();
+        }
+
+        private void Button_Delete(object sender, RoutedEventArgs e)
+        {
+            if (NotesGrid.SelectedItems.Count > 0)
+            {
+                var item = (Notes)NotesGrid.SelectedItem;
+                var id = int.Parse(item.Id.ToString());
+                notesBusiness.Delete(id);
+                UpdateNotes();
+            }
+        }
+
+        private void Button_Update(object sender, RoutedEventArgs e)
+        {
+            if (NotesGrid.SelectedItems.Count > 0)
+            {
+                var item = (Notes)NotesGrid.SelectedItem;
+                var id = int.Parse(item.Id.ToString());
+                Notes update = notesBusiness.Get(id);
+                NoteName.Text = update.Name;
+                NoteContent.Text = update.Content;
+                UpdateNotes();
+            }
+        }
+
+        private void Button_Send(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }
