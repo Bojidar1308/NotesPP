@@ -14,7 +14,7 @@
             <ColumnDefinition Width="119*"/>
         </Grid.ColumnDefinitions>
         <Border BorderBrush="Black" Margin="0,0,402,0" Background="#FF11999E">
-            <ListView x:Name="NotesGrid" RenderTransformOrigin="0.496,0.489" SelectionChanged="ProductsGrid_SelectionChanged" Margin="0,100,0,0">
+            <ListView x:Name="NotesGrid" RenderTransformOrigin="0.496,0.489" Margin="0,100,0,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -24,12 +24,12 @@
                 </ListView.ItemTemplate>
             </ListView>
         </Border>
-        <TextBox x:Name="NoteContent" HorizontalAlignment="Left" Margin="449,251,0,0" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="388" Width="784"/>
+        <TextBox x:Name="NoteContent" HorizontalAlignment="Left" Margin="449,251,0,0" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="388" Width="784" CornerRadius="15"/>
         <Border BorderBrush="Black" Margin="0,0,0,622" Grid.ColumnSpan="2" Background="#FF40514E"/>
-        <Button Content="Add" Margin="323,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="73" Width="141" Click="Button_Add"/>
-        <Button Content="Delete" Margin="177,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="73" Width="141" Click="Button_Delete"/>
-        <Button Content="Update" Margin="31,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="73" Width="141" Click="Button_Update"/>
-        <Button Content="Send" Margin="689,10,0,0" VerticalAlignment="Top" Height="73" Width="141" Grid.ColumnSpan="2" Click="Button_Send"/>
-        <TextBox x:Name="NoteName" HorizontalAlignment="Left" Margin="449,136,0,0" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="784" Height="71"/>
+        <Button Content="Add" Margin="323,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="73" Width="141" Click="Button_Add" CornerRadius="15"/>
+        <Button Content="Delete" Margin="177,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="73" Width="141" Click="Button_Delete" CornerRadius="15"/>
+        <Button Content="Update" Margin="31,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="73" Width="141" Click="Button_Update" CornerRadius="15"/>
+        <Button Content="Send" Margin="689,10,0,0" VerticalAlignment="Top" Height="73" Width="141" Grid.ColumnSpan="2" Click="Button_Send" CornerRadius="15"/>
+        <TextBox x:Name="NoteName" HorizontalAlignment="Left" Margin="449,136,0,0" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="784" Height="71" CornerRadius="15"/>
     </Grid>
 </Page>
