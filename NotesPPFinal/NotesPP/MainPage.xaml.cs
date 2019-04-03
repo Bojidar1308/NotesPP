@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -39,7 +40,8 @@ namespace NotesPP
             Notes note = new Notes()
             {
                 Name = NoteName.Text,
-                Content = NoteContent.Text
+                Content = NoteContent.Text,
+                AccUsername = "Pesho"
             };
             notesBusiness.Add(note);
             UpdateNotes();
@@ -71,7 +73,7 @@ namespace NotesPP
 
         private void Button_Send(object sender, RoutedEventArgs e)
         {
-           
+            Frame.Navigate(typeof(MailPage));
         }
     }
 }

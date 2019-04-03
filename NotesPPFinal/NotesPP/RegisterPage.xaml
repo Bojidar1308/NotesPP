@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="NotesPP.RegisterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NotesPP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FFC6CBEF" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="201*"/>
+            <ColumnDefinition Width="119*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" Margin="0,0,553,0" Background="#FF11999E"/>
+        <TextBox x:Name="RegisterUsername" HorizontalAlignment="Left" Margin="402,0,0,0" Text="" VerticalAlignment="Center" Height="71" Width="736" CornerRadius="15" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="RegisterPassword" HorizontalAlignment="Left" Margin="402,156,0,0" Text="" VerticalAlignment="Top" Width="736" Height="71" CornerRadius="15" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="RegisterName" HorizontalAlignment="Left" Margin="402,495,0,0" Text="" VerticalAlignment="Top" Width="736" Height="71" CornerRadius="15" Grid.ColumnSpan="2"/>
+        <Border BorderBrush="Black" Margin="0,0,0,622" Grid.ColumnSpan="2" Background="#FF40514E"/>
+        <Button Content="Register" Margin="402,608,0,0" VerticalAlignment="Top" Width="736" Grid.ColumnSpan="2" Height="77" CornerRadius="15" FontSize="36" FontWeight="Bold" Click="Button_Register"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,103,0,0" Text="Type your Username" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="731" Grid.ColumnSpan="2" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,266,0,0" Text="Type your Password" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="731" Grid.ColumnSpan="2" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,429,0,0" Text="Type your Full name" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="731" Grid.ColumnSpan="2" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+
+    </Grid>
+</Page>
