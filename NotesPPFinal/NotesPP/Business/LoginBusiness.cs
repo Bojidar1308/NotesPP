@@ -17,5 +17,6 @@ namespace NotesPP.Business
 
     class LoginBusiness
     {
+        //TODO:
     }
 }

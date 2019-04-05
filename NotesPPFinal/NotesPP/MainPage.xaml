@@ -25,14 +25,14 @@
             </ListView>
         </Border>
         <Image HorizontalAlignment="Left" Height="98" VerticalAlignment="Top" Width="100" Source="/Assets/Square150x150Logo.png"/>
-        <Border BorderBrush="Black" Margin="0,0,0,622" Grid.ColumnSpan="2" Background="#FF40514E"/>
+        <Border BorderBrush="Black" Margin="0,0,0,592" Grid.ColumnSpan="2" Background="#FF40514E"/>
         <TextBox x:Name="NoteName" HorizontalAlignment="Left" Margin="590,133,0,0" Text="" VerticalAlignment="Top" Width="680" Height="71" CornerRadius="15" AllowDrop="True" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <TextBox x:Name="NoteContent" HorizontalAlignment="Left" Margin="588,251,0,0" Text="" VerticalAlignment="Top" Height="109" Width="680" CornerRadius="15" AllowDrop="True" Grid.ColumnSpan="2"/>
         <TextBox x:Name="SenderMail" HorizontalAlignment="Left" Margin="588,406,0,0" Text="" VerticalAlignment="Top" Width="680" Height="71" CornerRadius="15" Grid.ColumnSpan="2"/>
         <TextBox x:Name="SenderPass" HorizontalAlignment="Left" Margin="588,513,0,0" Text="" VerticalAlignment="Top" Height="71" Width="680" CornerRadius="15" Grid.ColumnSpan="2"/>
         <TextBox x:Name="RecieverMail" HorizontalAlignment="Left" Margin="588,619,0,0" Text="" VerticalAlignment="Top" Width="680" Height="71" CornerRadius="15" Grid.ColumnSpan="2"/>
-        <TextBlock HorizontalAlignment="Left" Margin="407,154,0,0" Text="Subject:" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="112" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Left" Margin="402,276,0,0" Text="Body:" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="112" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="407,154,0,0" Text="Subject of note:" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="171" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,276,0,0" Text="Body of note:" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="181" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="402,427,0,0" Text="Sender E-Mail:" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="179" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="407,525,0,0" Text="E-Mail Password:" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="179" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="402,640,0,0" Text="Reciever E-Mail:" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="179" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>

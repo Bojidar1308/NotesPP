@@ -23,13 +23,18 @@ namespace NotesPP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        /// <summary>
+        /// Инстанция на класа <c>SendingBusiness</c> 
+        /// с име <c>sendingBusiness</c>
+        /// </summary>
+
+        private SendingBusiness sendingBusiness = new SendingBusiness();
 
         /// <summary>
         /// Инстанция на класа <c>NotesBusiness</c> 
         /// с име <c>notesBusiness</c>
         /// </summary>
 
-        private SendingBusiness sendingBusiness = new SendingBusiness();
         private NotesBusiness notesBusiness = new NotesBusiness();
 
         /// <summary>
@@ -113,8 +118,7 @@ namespace NotesPP
         /// <summary>
         /// Метод, който се активира след натискане
         /// на бутон <c>Button_Send</c> и изпраща
-        /// данни на класа <c>MailPage</c>, като ги
-        /// получава от формите <c>NoteName</c> и <c>NoteContent</c>.
+        /// данни на класа <c>SendingBusiness</c>.
         /// </summary>
 
         private void Button_Send(object sender, RoutedEventArgs e)
