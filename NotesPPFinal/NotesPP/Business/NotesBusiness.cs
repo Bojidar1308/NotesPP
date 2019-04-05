@@ -14,6 +14,7 @@ namespace NotesPP
     /// Той може да връща информация, да добавя, да актуализира и
     /// да изтрива бележки.
     /// </remarks>
+    
     class NotesBusiness
     {
         private notesppContext notesppContext;
@@ -38,7 +39,7 @@ namespace NotesPP
         /// Метод, който добавя нова бележка.
         /// </summary>
         /// <param name="note">
-        /// Обект от типа Note, който е бележката която ще се добавя.
+        /// Обект от типа <c>Note</c>, който е бележката която ще се добавя.
         /// </param>
 
         public void Add(Notes note)
@@ -54,7 +55,7 @@ namespace NotesPP
         /// Метод, който актуализира дадена бележка.
         /// </summary>
         /// <param name="note">
-        /// Обект от типа Note, който е бележката която ще се актуализира.
+        /// Обект от типа <c>Note</c>, който е бележката която ще се актуализира.
         /// </param>
 
         public void Update(Notes note)
@@ -90,6 +91,14 @@ namespace NotesPP
                 }
             }
         }
+
+        /// <summary>
+        /// Метод, който търси дадена бележка.
+        /// </summary>
+        /// <param name="id">
+        /// Число от целочислен тип, което е номер на бележката
+        /// която се търси.
+        /// </param>
 
         public Notes Get(int id)
         {

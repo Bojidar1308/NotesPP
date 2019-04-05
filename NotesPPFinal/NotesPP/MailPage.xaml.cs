@@ -14,21 +14,37 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace NotesPP
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Страницата, чрез която ще се изпращат Е-майли.
     /// </summary>
+     
     public sealed partial class MailPage : Page
     {
+        /// <summary>
+        /// Инстанция на класа <c>SendingBusiness</c> 
+        /// с име <c>sendingBusiness</c>
+        /// </summary>
+        
         private SendingBusiness sendingBusiness = new SendingBusiness();
+
+        /// <summary>
+        /// Метод, който инициализира компонентите
+        /// от XAML кода на страница <c>MailPage</c>.
+        /// </summary>
 
         public MailPage()
         {
             this.InitializeComponent();
         }
+
+        /// <summary>
+        /// Метод, който се активира след натискане
+        /// на бутон <c>Button_SendMessage</c> и изпраща
+        /// данни на класа <c>SendingBusiness</c>, като
+        /// получава част от тях от класа <c>MainPage</c>.
+        /// </summary>
 
         private void Button_SendMessage(object sender, RoutedEventArgs e)
         {
