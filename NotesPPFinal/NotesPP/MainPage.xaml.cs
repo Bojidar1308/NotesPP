@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NotesPP.Business;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,25 +23,13 @@ namespace NotesPP
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private string subject;
-        private string body;
-
-        public string Subject
-        {
-            get { return this.subject; }
-            set { this.subject = value; }
-        }
-        public string Body
-        {
-            get { return this.body; }
-            set { this.body = value; }
-        }
 
         /// <summary>
         /// Инстанция на класа <c>NotesBusiness</c> 
         /// с име <c>notesBusiness</c>
         /// </summary>
 
+        private SendingBusiness sendingBusiness = new SendingBusiness();
         private NotesBusiness notesBusiness = new NotesBusiness();
 
         /// <summary>
@@ -76,7 +65,7 @@ namespace NotesPP
             {
                 Name = NoteName.Text,
                 Content = NoteContent.Text,
-                AccUsername = "Pesho"
+                AccUsername = "Admin"
             };
             notesBusiness.Add(note);
             UpdateNotes();
@@ -130,9 +119,12 @@ namespace NotesPP
 
         private void Button_Send(object sender, RoutedEventArgs e)
         {
-            this.subject = NoteName.Text;
-            this.body = NoteContent.Text;
-            Frame.Navigate(typeof(MailPage));
+            string subject = NoteName.Text;
+            string body = NoteContent.Text;
+            string from = SenderMail.Text;
+            string password = SenderPass.Text;
+            string to = RecieverMail.Text;
+            sendingBusiness.Send(from, password, to, subject, body);
         }
     }
 }
