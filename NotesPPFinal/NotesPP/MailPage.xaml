@@ -14,8 +14,8 @@
             <ColumnDefinition Width="119*"/>
         </Grid.ColumnDefinitions>
         <Border BorderBrush="Black" Margin="0,0,553,0" Background="#FF11999E"/>
-        <TextBox x:Name="SenderMail" HorizontalAlignment="Left" Margin="402,0,0,0" Text="" VerticalAlignment="Center" Height="71" Width="736" CornerRadius="15" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="SenderPass" HorizontalAlignment="Left" Margin="402,156,0,0" Text="" VerticalAlignment="Top" Width="736" Height="71" CornerRadius="15" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="SenderPass" HorizontalAlignment="Left" Margin="402,0,0,0" Text="" VerticalAlignment="Center" Height="71" Width="736" CornerRadius="15" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="SenderMail" HorizontalAlignment="Left" Margin="402,156,0,0" Text="" VerticalAlignment="Top" Width="736" Height="71" CornerRadius="15" Grid.ColumnSpan="2"/>
         <TextBox x:Name="RecieverMail" HorizontalAlignment="Left" Margin="402,495,0,0" Text="" VerticalAlignment="Top" Width="736" Height="71" CornerRadius="15" Grid.ColumnSpan="2"/>
         <Border BorderBrush="Black" Margin="0,0,0,622" Grid.ColumnSpan="2" Background="#FF40514E"/>
         <Button Content="Send Message" Margin="402,608,0,0" VerticalAlignment="Top" Width="736" Grid.ColumnSpan="2" Height="77" CornerRadius="15" FontSize="36" FontWeight="Bold" Click="Button_SendMessage"/>
@@ -25,4 +25,3 @@
 
     </Grid>
 </Page>
-

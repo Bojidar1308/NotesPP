@@ -33,7 +33,7 @@ namespace NotesPP
                 return notesppContext.Notes.ToList();
             }
         }
-
+        
         /// <summary>
         /// Метод, който добавя нова бележка.
         /// </summary>

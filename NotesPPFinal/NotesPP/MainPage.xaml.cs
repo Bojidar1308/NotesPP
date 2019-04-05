@@ -24,13 +24,26 @@ namespace NotesPP
     public sealed partial class MainPage : Page
     {
         private NotesBusiness notesBusiness = new NotesBusiness();
+        private string subject;
+        private string body;
+
+        public string Subject
+        {
+            get { return this.subject; }
+            set {this.subject = value; }
+        }
+        public string Body
+        {
+            get { return this.body; }
+            set { this.body = value; }
+        }
 
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private void UpdateNotes()
+        public void UpdateNotes()
         {
             NotesGrid.ItemsSource = notesBusiness.GetAllNotes();
         }
@@ -73,6 +86,8 @@ namespace NotesPP
 
         private void Button_Send(object sender, RoutedEventArgs e)
         {
+            this.subject = NoteName.Text;
+            this.body = NoteContent.Text;
             Frame.Navigate(typeof(MailPage));
         }
     }
